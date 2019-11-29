@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+
+{% block title %}
+    Пробуем новые фичи для Django!
+{% endblock title %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="mb-3">Это мой проект для тестирования и создания разных фичей для Django.</div>
+        <h3>Список фич:</h3>
+        <ul class="features">
+            <li class="features-item"><a href="#">Регистрация с подтверждение по имейл</a></li>
+            <li class="features-item"><a href="{% url 'pushes:pushes_index' %}">Push уведомления</a></li>
+            <li class="features-item"><a href="{% url 'toolbar:toolbar_index' %}">Фичи для админки</a></li>
+        </ul>
+    </div>
+{% endblock content %}
+    

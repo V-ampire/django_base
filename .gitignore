@@ -1,0 +1,19 @@
+# Конфиг-файл config.json
+config.json
+secrets.json
+# pycache
+__pycache__/
+__pycache__/*
+*.pyc
+# sqlite db файлы
+*.sqlite3
+# Деплоймент
+/deployment/*
+# Медиа и статик
+/media/*
+/static/*
+*.sh
+*.pem
+# node_modules
+node_modules/
+todo

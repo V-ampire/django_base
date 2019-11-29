@@ -1,0 +1,17 @@
+{
+  "name": "pushes",
+  "version": "1.0.0",
+  "description": "API for handle push notifications",
+  "main": "pushes.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "v-ampire",
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^7.5.0"
+  }
+}

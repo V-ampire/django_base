@@ -1,0 +1,75 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+
+{% block title %}
+    Push уведомления для Django
+{% endblock title %}
+
+
+{% block css %}
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+{% endblock css %}
+    
+
+
+{% block content %}
+    <div class="container">
+        <div class="mb-3">Push уведомления для Django</div>
+        <div class="row mb-3">
+            <div class="col-12 col-md-6 m-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            Уведомления: <span id="push-toggler-container"></span>
+                        </div>
+                        <h5 class="card-title">Отправка Push уведомления</h5>
+                        <div class="push">
+                          <form id="push-form">
+                              <div id="push-form-fail" class="fail px-2 mb-2"></div>
+                            <div class="form-group">
+                                <input required type="text" name="header" class="form-control" id="push-header" placeholder="Заголовок (64 символа макс.)">
+                            </div>
+                            <div class="form-group">
+                                <input required type="text" name="body" class="form-control" id="push-body" placeholder="Содержание (128 символов макс.)">
+                            </div>
+                            <button type="submit" class="btn btn-dark">Пушим!</button>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="div">Информация:</div>
+                <ul class="class=section-links">
+                    <li class="section-links-item">
+                        <a href="https://www.digitalocean.com/community/tutorials/how-to-send-web-push-notifications-from-django-applications">Туториал от Digital Ocean</a>
+                    </li>
+                    <li class="section-links-item">
+                        <a href="https://github.com/web-push-libs/pywebpush">pywebpush</a>
+                    </li>
+                    <li class="section-links-item">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push API</a>
+                    </li>
+                    <li class="section-links-item">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>
+                    </li>
+                    <li class="section-links-item">
+                        <a href="https://web-push-codelab.glitch.me/">Генератор ключей</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block scripts %}
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+    <script src="{% static 'pushes/js/src/pushes/pushes.js' %}"></script>
+    <script src="{% static 'pushes/js/src/push_app.js' %}"></script>
+{% endblock scripts %}
+    

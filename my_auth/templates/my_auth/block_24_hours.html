@@ -1,0 +1,16 @@
+{% extends 'my_auth/base_my_auth.html' %}
+
+
+{% block title %}
+    <title>Вы заблокированы на 24 часа</title>
+{% endblock title %}
+
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid h-100 m-0 p-0">
+        <div class="container">
+            <h1 class="display-4">Вы были заблокированы на 24 часа!</h1>
+            <p class="lead">Мы заметили подозрительную активность с вашего IP адреса, в целях безопасности ваш IP был заблокирован на 24 часа.</p>
+        </div>
+    </div>
+{% endblock content %}

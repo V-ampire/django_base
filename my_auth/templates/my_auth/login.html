@@ -1,0 +1,20 @@
+{% extends 'my_auth/base_my_auth.html' %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 col-md-8 col-lg-6 m-auto">
+                <form class="bg-light p-2 rounded m-auto" method="post" action="{% url 'my_auth:login' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="button-row">
+                        <button type="submit" class="btn btn-warning btn-block">Войти</button>
+                    </div>
+                    <input type="hidden" name="next" value="{{ next }}">
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    
