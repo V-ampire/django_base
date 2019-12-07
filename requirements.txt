@@ -3,3 +3,4 @@ psycopg2-binary==2.8.3
 ipython==7.8.0
 djangorestframework==3.10.3
 pywebpush==1.10.0
+requests==2.22.0

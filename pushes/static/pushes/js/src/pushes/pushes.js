@@ -17,6 +17,7 @@ function Pushes(options) {
         afterUnSubsCallback: undefined,
         callbackIfSubs: undefined,
         callbackIfUnSubs: undefined,
+        notSupportedCallback: undefined,
     };
 
     let sw;
@@ -202,6 +203,9 @@ function Pushes(options) {
 
     function showNotAllowed(message) {
         // FIXME More actions if sw is not supported
+        if (opts.notSupportedCallback !== undefined) {
+            opts.notSupportedCallback();
+        }
         console.log(message);
     };
 

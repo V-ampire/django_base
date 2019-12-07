@@ -84,6 +84,9 @@ const PushApi = Pushes(options);
     // Колбек выполнится если уже подписки еще нет
     // Выполняется независимо от ответа сервера
     callbackIfUnSubs: undefined;
+
+    // Колбек выполнится если уведомления не поддерживаются
+    notSupportedCallback: undefined,
 }
 
 Для отправки запросов на сервер нужно подключить [куки](https://github.com/js-cookie/js-cookie куки)
