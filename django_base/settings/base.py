@@ -117,7 +117,7 @@ AUTH_ATTEMPTS = {
     "24_HOURS_BLOCK": 9,
 }
 
-AUTH_USER_MODEL = 'my_auth.ConfirmedUser'
+AUTH_USER_MODEL = 'my_auth.CustomConfirmedUser'
 
 
 EMAIL_HOST = get_secrets('EMAIL')['EMAIL_HOST']
